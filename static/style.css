@@ -355,3 +355,60 @@ pre {
     font-size: 13px;
     line-height: 1.5;
 }
+
+.result-guide {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(96, 165, 250, 0.10);
+    border: 1px solid rgba(96, 165, 250, 0.20);
+    color: #dbeafe;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.unlock-soft-note {
+    margin-top: 6px;
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .container,
+    .main-card,
+    .card,
+    .result-card,
+    .locked-box {
+        border-radius: 14px;
+    }
+
+    h1 {
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        line-height: 1.7;
+    }
+
+    .hero-points {
+        margin-top: 14px;
+    }
+
+    .result-guide {
+        margin-bottom: 14px;
+    }
+
+    .unlock-cta-row {
+        align-items: flex-start;
+    }
+
+    #unlockBtn {
+        width: 100%;
+    }
+
+    .message-box,
+    .loading-box {
+        line-height: 1.7;
+    }
+}
