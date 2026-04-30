@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI手相 / 命理分析</title>
-    <link rel="stylesheet" href="/static/style.css?v=20260429_06" />
-    <script src="/static/app.js?v=20260429_06"></script>
+    <link rel="stylesheet" href="/static/style.css?v=20260430_01" />
+    <script src="/static/app.js?v=20260430_01"></script>
 </head>
 <body>
     <div class="container">
@@ -13,6 +13,12 @@
             <div>
                 <h1 id="pageTitle">AI手相 / 命理分析</h1>
                 <p class="subtitle" id="pageSubtitle">上传手掌照片，或输入个人资料，获取你的专属运势分析报告</p>
+
+                <div class="hero-points">
+                    <div class="hero-point" id="heroPoint1">✨ 先看免费预览，再决定是否解锁完整版</div>
+                    <div class="hero-point" id="heroPoint2">🔮 支持手相分析 / 资料命理分析双模式</div>
+                    <div class="hero-point" id="heroPoint3">🌏 支持中文、日本語、English</div>
+                </div>
             </div>
         
             <div class="lang-switch">
@@ -137,7 +143,10 @@
 
         <div id="result" class="hidden">
             <h2 id="freeResultTitle">免费结果</h2>
-            <div id="previewBadge" class="report-badge">预览版</div>
+            <div class="result-head-row">
+                <div id="previewBadge" class="report-badge">预览版</div>
+                <div id="previewHint" class="preview-hint">你正在查看的是经过整理后的预览内容</div>
+            </div>
             <pre id="freeReport"></pre>
         
             <div id="paidSection" class="paid-section">
@@ -146,7 +155,11 @@
 
                 <div id="lockedBox" class="locked-box">
                     <p class="locked-title" id="lockedTitle">🔒 完整版深度报告已锁定</p>
-
+                
+                    <p class="locked-subtitle" id="lockedSubtitle">
+                        你看到的只是前半部分。后面的内容会更具体、更直接，也更适合拿来做判断参考。
+                    </p>
+                
                     <div class="locked-desc">
                         <p id="lockedIntro">解锁后你将继续查看：</p>
                         <ul class="locked-list">
@@ -157,10 +170,14 @@
                             <li id="lockedItem5">更具体的建议与行动方向</li>
                         </ul>
                     </div>
-
-                    <div class="unlock-price-note" id="unlockPriceNote">仅需 ¥200 解锁完整报告</div>
-
-                    <button id="unlockBtn" type="button">立即解锁完整版</button>
+                
+                    <div class="unlock-cta-row">
+                        <div>
+                            <div class="unlock-price-note" id="unlockPriceNote">仅需 ¥200 解锁完整报告</div>
+                            <div class="unlock-trust-note" id="unlockTrustNote">一次解锁，立即查看完整内容</div>
+                        </div>
+                        <button id="unlockBtn" type="button">立即解锁完整版</button>
+                    </div>
                 </div>
         
                 <div id="paidContent" class="hidden">

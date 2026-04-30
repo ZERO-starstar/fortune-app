@@ -303,3 +303,55 @@ pre {
         justify-content: flex-start;
     }
 }
+
+.hero-points {
+    margin-top: 18px;
+    display: grid;
+    gap: 10px;
+}
+
+.hero-point {
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #e5e7eb;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.result-head-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.preview-hint {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.locked-subtitle {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    color: #e2e8f0;
+    line-height: 1.8;
+}
+
+.unlock-cta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.unlock-trust-note {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.5;
+}
