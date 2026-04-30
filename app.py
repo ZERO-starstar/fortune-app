@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Form, UploadFile, File, BackgroundTasks
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from datetime import datetime
 import os
 import uuid
 import traceback
@@ -189,6 +190,9 @@ async def analyze(
     age_range: str = Form(""),
     palm_image: UploadFile = File(None)
 ):
+    now = datetime.now()
+    current_date = now.strftime("%Y-%m-%d")
+    current_year = now.year
     try:
         user_id = uuid.uuid4().hex
         image_path = ""
@@ -246,7 +250,9 @@ async def analyze(
                 gender=palm_gender,
                 age_range=age_range,
                 topic=topic,
-                lang=lang
+                lang=lang,
+                current_date=current_date,
+                current_year=current_year
             )
 
             full_report = generate_profile_report(
@@ -272,7 +278,9 @@ async def analyze(
                 birthday=birthday,
                 star_sign=star_sign,
                 topic=topic,
-                lang=lang
+                lang=lang,
+                current_date=current_date,
+                current_year=current_year
             )
 
             full_report = generate_profile_report(

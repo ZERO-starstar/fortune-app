@@ -202,7 +202,16 @@ def age_range_label(age_range: str, lang: str) -> str:
     lang = normalize_lang(lang)
     return AGE_RANGE_MAP[lang].get(age_range, age_range)
 
-def build_profile_user_prompt(name: str, gender: str, birthday: str, star_sign: str, topic: str, lang: str = "zh") -> str:
+def build_profile_user_prompt(
+    name: str,
+    gender: str,
+    birthday: str,
+    star_sign: str,
+    topic: str,
+    lang: str = "zh",
+    current_date: str = "",
+    current_year: int = 0
+) -> str:
     lang = normalize_lang(lang)
     sections = LANG_TEXT[lang]["sections_profile"]
     topic_text = topic_label(topic, lang)
@@ -219,6 +228,8 @@ def build_profile_user_prompt(name: str, gender: str, birthday: str, star_sign: 
 - 生日：{birthday}
 - 星座：{star_sign_text}
 - 重点方向：{topic_text}
+- 当前日期：{current_date}
+- 当前年份：{current_year}
 
 输出要求：
 1. 开头先写一个有吸引力的标题，像“{name}的专属命运解读”这种感觉
@@ -235,6 +246,9 @@ def build_profile_user_prompt(name: str, gender: str, birthday: str, star_sign: 
 4. 语言要优雅、自然、具体、带画面感
 5. 不要空泛，不要机械重复
 6. 结尾加一句：{note}
+7. 所有“当前状态 / 未来趋势 / 未来3个月”的判断，都必须以当前日期 {current_date} 为基准
+8. 如果提到年份，必须使用当前年份 {current_year}，不要写成其他年份
+9. 除非确实必要，否则尽量避免频繁直接写具体年份，以免造成时间错位感
 """
 
 PALM_IMAGE_ANALYSIS_PROMPT = """
@@ -259,7 +273,15 @@ money_line: （如：有轻微迹象 / 不明显 / 多条细线 / 看不清）
 overall_impression: （一句总结，如：整体线条偏细，属于细腻谨慎型手相）
 """
 
-def build_palm_report_prompt(palm_features: str, gender: str, age_range: str, topic: str, lang: str = "zh") -> str:
+def build_palm_report_prompt(
+    palm_features: str,
+    gender: str,
+    age_range: str,
+    topic: str,
+    lang: str = "zh",
+    current_date: str = "",
+    current_year: int = 0
+) -> str:
     lang = normalize_lang(lang)
     sections = LANG_TEXT[lang]["sections_palm"]
     topic_text = topic_label(topic, lang)
@@ -274,6 +296,8 @@ def build_palm_report_prompt(palm_features: str, gender: str, age_range: str, to
 - 性别：{gender_text}
 - 年龄段：{age_text}
 - 重点方向：{topic_text}
+- 当前日期：{current_date}
+- 当前年份：{current_year}
 
 手相观察结果：
 {palm_features}
@@ -294,6 +318,9 @@ def build_palm_report_prompt(palm_features: str, gender: str, age_range: str, to
 5. 语言要具体、优雅、有画面感，但不要过度夸张
 6. 不要写医疗诊断、死亡预测、灾难
 7. 结尾加一句：{note}
+8. 所有“当前状态 / 未来趋势 / 未来3个月”的判断，都必须以当前日期 {current_date} 为基准
+9. 如果提到年份，必须使用当前年份 {current_year}，不要写成其他年份
+10. 除非确实必要，否则尽量避免频繁直接写具体年份，以免造成时间错位感
 """
 
 PALM_IMAGE_QUALITY_CHECK_PROMPT = """
