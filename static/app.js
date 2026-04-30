@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let latestPaidReport = "";
     let latestUserId = "";
 
-    console.log("app.js loaded - payment restore version");
+    //console.log("app.js loaded - payment restore version");
 
     function updateModeView() {
         if (!modeSelect || !profileFields || !palmFields) return;
@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderPaidState(isPaid) {
-        console.log("renderPaidState:", isPaid);
+        //console.log("renderPaidState:", isPaid);
 
         if (!lockedBox || !paidContent || !paidReport) {
             console.error("付费区元素缺失", { lockedBox, paidContent, paidReport });
@@ -690,7 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const urlLang = url.searchParams.get("lang");
     
         if (paid === "true" && userId) {
-            console.log("检测到支付成功返回, userId =", userId);
+            //console.log("检测到支付成功返回, userId =", userId);
     
             if (urlLang && ["zh", "ja", "en"].includes(urlLang)) {
                 setCurrentLang(urlLang);
