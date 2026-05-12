@@ -53,19 +53,19 @@ init_db()
 
 @app.get("/terms")
 async def terms(request: Request):
-    return templates.TemplateResponse("terms.html", {"request": request})
+    return templates.TemplateResponse(request, "terms.html")
 
 @app.get("/privacy")
 async def privacy(request: Request):
-    return templates.TemplateResponse("privacy.html", {"request": request})
+    return templates.TemplateResponse(request, "privacy.html")
 
 @app.get("/legal")
 async def legal(request: Request):
-    return templates.TemplateResponse("legal.html", {"request": request})
+    return templates.TemplateResponse(request, "legal.html")
 
 @app.get("/contact")
 async def contact(request: Request):
-    return templates.TemplateResponse("contact.html", {"request": request})
+    return templates.TemplateResponse(request, "contact.html")
 
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
