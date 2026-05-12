@@ -45,6 +45,22 @@ init_db()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+@app.get("/terms")
+async def terms(request: Request):
+    return templates.TemplateResponse("terms.html", {"request": request})
+
+@app.get("/privacy")
+async def privacy(request: Request):
+    return templates.TemplateResponse("privacy.html", {"request": request})
+
+@app.get("/legal")
+async def legal(request: Request):
+    return templates.TemplateResponse("legal.html", {"request": request})
+
+@app.get("/contact")
+async def contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
+
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
