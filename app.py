@@ -40,10 +40,10 @@ load_dotenv()
 
 app = FastAPI()
 
-init_db()
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+
+init_db()
 
 @app.get("/terms")
 async def terms(request: Request):
