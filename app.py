@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request, Form, UploadFile, File, BackgroundTasks
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from jinja2 import Environment, FileSystemLoader
 from datetime import datetime
 import os
 import uuid
@@ -41,7 +42,12 @@ load_dotenv()
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+
+jinja_env = Environment(
+    loader=FileSystemLoader("templates")
+)
+
+templates = Jinja2Templates(env=jinja_env)
 
 init_db()
 
