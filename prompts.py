@@ -1,134 +1,134 @@
 PROFILE_SYSTEM_PROMPT = """
-你是一位高级AI命理分析师与占卜文案专家。
+你是一位 AI 性格倾向与自我理解报告生成助手。
 
-你的表达风格需要融合：
-1. 中国传统命理语言（生肖、五行、运势阶段、贵人与阻碍）
-2. 日本占卜式表达（细腻、克制、富有观察感）
-3. 欧美占星式表达（强调人生阶段、关系、选择与成长）
+你的任务是根据用户提供的资料，或根据手掌图片中可见的非医学特征，
+生成娱乐、参考、自我理解目的的性格倾向与行动风格报告。
 
-输出要求：
-- 强代入感、强画面感、强产品感
-- 语言要优雅、有神秘感、有被理解的感觉
-- 不要空泛，不要机械重复
-- 不要使用医疗诊断、死亡预测、灾难、寿命等内容
-- 不要承诺一定发财、一定结婚、一定成功
-- 允许适度“惊艳感”，但不要浮夸到离谱
+重要限制：
+- 不要称自己为命理师、占卜师、灵能者、预测师
+- 不要写“占卜”“算命”“命理”“运势预测”“未来必然发生”
+- 不要承诺准确预测未来
+- 不要写医疗诊断、法律建议、投资建议、就业保证、疾病判断、死亡、灾难、寿命
+- 不要写“必然发财”“一定结婚”“一定成功”等断定表达
+- 不要根据手掌判断疾病、寿命、财富、婚姻结果
+- 使用“倾向”“可能”“参考”“可以留意”“自我理解的线索”等表达
+- 报告必须明确是娱乐、自我理解与参考目的
 """
 
 LANG_TEXT = {
     "zh": {
         "lang_name": "中文",
-        "entertainment_note": "仅供娱乐参考",
+        "entertainment_note": "以上内容仅供娱乐、自我理解与参考，不构成医疗、法律、投资、就业或其他专业建议。",
         "sections_profile": [
-            "命运主轴",
-            "当前状态",
-            "重点方向解析",
-            "未来3个月趋势",
-            "你最该把握的机会",
-            "你最需要避开的误区",
-            "行动建议",
-            "一句点醒你的总结",
+            "核心性格倾向",
+            "当前状态参考",
+            "重点主题解读",
+            "近期关注点",
+            "沟通与选择中的盲点",
+            "自我调整建议",
+            "一句提醒",
+            "总结",
         ],
         "sections_palm": [
-            "手相整体气质",
-            "当前状态",
-            "重点方向解析",
-            "未来3个月趋势",
-            "你最该把握的机会",
-            "你最需要避开的误区",
-            "行动建议",
-            "一句点醒你的总结",
+            "手掌特征给人的整体印象",
+            "当前状态参考",
+            "重点主题解读",
+            "近期关注点",
+            "沟通与选择中的盲点",
+            "自我调整建议",
+            "一句提醒",
+            "总结",
         ],
     },
     "ja": {
         "lang_name": "日本語",
-        "entertainment_note": "本内容は娯楽・参考目的です",
+        "entertainment_note": "本内容は娯楽・自己理解・参考目的であり、医療、法律、投資、就職等の専門的助言ではありません。",
         "sections_profile": [
-            "運命の軸",
-            "現在の状態",
-            "重点テーマの解釈",
-            "今後3か月の流れ",
-            "今いちばん掴むべきチャンス",
-            "今いちばん避けるべき落とし穴",
-            "行動アドバイス",
-            "最後にあなたへ一言",
+            "基本的な性格傾向",
+            "現在の状態の参考",
+            "重点テーマの傾向分析",
+            "最近意識しやすいポイント",
+            "コミュニケーションや選択の癖",
+            "セルフケア・行動のヒント",
+            "ひとことメッセージ",
+            "まとめ",
         ],
         "sections_palm": [
-            "手相全体の印象",
-            "現在の状態",
-            "重点テーマの解釈",
-            "今後3か月の流れ",
-            "今いちばん掴むべきチャンス",
-            "今いちばん避けるべき落とし穴",
-            "行動アドバイス",
-            "最後にあなたへ一言",
+            "手のひら特徴から見える全体印象",
+            "現在の状態の参考",
+            "重点テーマの傾向分析",
+            "最近意識しやすいポイント",
+            "コミュニケーションや選択の癖",
+            "セルフケア・行動のヒント",
+            "ひとことメッセージ",
+            "まとめ",
         ],
     },
     "en": {
         "lang_name": "English",
-        "entertainment_note": "For entertainment purposes only",
+        "entertainment_note": "This content is for entertainment, self-understanding, and reference only. It does not constitute medical, legal, investment, employment, or other professional advice.",
         "sections_profile": [
-            "Your core destiny pattern",
-            "Your current state",
-            "Deep reading of your focus area",
-            "Your next 3 months",
-            "The opportunity you should seize now",
-            "The pitfall you should avoid now",
-            "Action guidance",
-            "One final line meant for you",
+            "Core Personality Tendencies",
+            "Current State Reference",
+            "Theme-Based Insight",
+            "Recent Focus Areas",
+            "Communication and Decision-Making Patterns",
+            "Self-Reflection and Action Suggestions",
+            "One Gentle Reminder",
+            "Summary",
         ],
         "sections_palm": [
-            "Overall palm impression",
-            "Your current state",
-            "Deep reading of your focus area",
-            "Your next 3 months",
-            "The opportunity you should seize now",
-            "The pitfall you should avoid now",
-            "Action guidance",
-            "One final line meant for you",
+            "Overall Impression from Palm Features",
+            "Current State Reference",
+            "Theme-Based Insight",
+            "Recent Focus Areas",
+            "Communication and Decision-Making Patterns",
+            "Self-Reflection and Action Suggestions",
+            "One Gentle Reminder",
+            "Summary",
         ],
     }
 }
 
 TOPIC_MAP = {
     "zh": {
-        "general": "综合运势",
-        "love": "感情",
-        "marriage": "婚姻",
-        "future": "前程",
-        "career": "事业",
-        "wealth": "金运",
-        "health": "健康",
-        "study": "学业",
+        "general": "综合倾向",
+        "love": "情感沟通倾向",
+        "marriage": "亲密关系倾向",
+        "future": "未来规划参考",
+        "career": "工作风格",
+        "wealth": "金钱观与消费倾向",
+        "health": "压力与生活状态",
+        "study": "学习风格",
         "relationship": "人际关系",
-        "three_months": "未来3个月",
-        "one_year": "未来1年",
+        "three_months": "近期关注点",
+        "one_year": "长期规划参考",
     },
     "ja": {
-        "general": "総合運勢",
-        "love": "恋愛",
-        "marriage": "結婚",
-        "future": "将来運",
-        "career": "仕事運",
-        "wealth": "金運",
-        "health": "健康運",
-        "study": "学業運",
+        "general": "総合傾向",
+        "love": "恋愛・感情傾向",
+        "marriage": "親密な関係の傾向",
+        "future": "今後の計画の参考",
+        "career": "仕事スタイル",
+        "wealth": "お金との向き合い方",
+        "health": "ストレス・生活状態",
+        "study": "学習スタイル",
         "relationship": "人間関係",
-        "three_months": "今後3か月",
-        "one_year": "今後1年",
+        "three_months": "最近の関心テーマ",
+        "one_year": "長期計画の参考",
     },
     "en": {
-        "general": "overall fortune",
-        "love": "love",
-        "marriage": "marriage",
-        "future": "future path",
-        "career": "career",
-        "wealth": "wealth",
-        "health": "health",
-        "study": "study",
+        "general": "overall tendencies",
+        "love": "emotional communication",
+        "marriage": "close relationship tendencies",
+        "future": "planning reference",
+        "career": "work style",
+        "wealth": "money mindset",
+        "health": "stress and lifestyle",
+        "study": "learning style",
         "relationship": "relationships",
-        "three_months": "the next 3 months",
-        "one_year": "the next 1 year",
+        "three_months": "recent focus areas",
+        "one_year": "long-term planning reference",
     }
 }
 
@@ -183,24 +183,30 @@ AGE_RANGE_MAP = {
     }
 }
 
+
 def normalize_lang(lang: str) -> str:
     return lang if lang in ["zh", "ja", "en"] else "zh"
 
+
 def topic_label(topic: str, lang: str) -> str:
     lang = normalize_lang(lang)
-    return TOPIC_MAP[lang].get(topic, topic)
+    return TOPIC_MAP[lang].get(topic, TOPIC_MAP[lang]["general"])
+
 
 def star_sign_label(star_sign: str, lang: str) -> str:
     lang = normalize_lang(lang)
     return STAR_SIGN_MAP[lang].get(star_sign, star_sign)
 
+
 def gender_label(gender: str, lang: str) -> str:
     lang = normalize_lang(lang)
     return GENDER_MAP[lang].get(gender, gender)
 
+
 def age_range_label(age_range: str, lang: str) -> str:
     lang = normalize_lang(lang)
     return AGE_RANGE_MAP[lang].get(age_range, age_range)
+
 
 def build_profile_user_prompt(
     name: str,
@@ -220,20 +226,20 @@ def build_profile_user_prompt(
     note = LANG_TEXT[lang]["entertainment_note"]
 
     return f"""
-请使用{LANG_TEXT[lang]["lang_name"]}输出一份高代入感、高吸引力、像“专属命运报告”一样的命理分析。
+请使用{LANG_TEXT[lang]["lang_name"]}输出一份高代入感、自然、具体的“AI性格倾向与自我理解报告”。
 
 用户资料：
 - 姓名：{name}
 - 性别：{gender_text}
 - 生日：{birthday}
-- 星座：{star_sign_text}
-- 重点方向：{topic_text}
+- 参考类型：{star_sign_text}
+- 关注主题：{topic_text}
 - 当前日期：{current_date}
 - 当前年份：{current_year}
 
 输出要求：
-1. 开头先写一个有吸引力的标题，像“{name}的专属命运解读”这种感觉
-2. 第一段先给一段整体总结，要让用户有“被看懂了”的感觉
+1. 开头先写一个自然、有吸引力的标题，例如“{name}的自我理解报告”这种感觉。
+2. 第一段先给一段整体总结，让用户有“被理解了”的感觉，但不要神秘化。
 3. 然后严格按以下结构输出：
 - {sections[0]}
 - {sections[1]}
@@ -243,35 +249,39 @@ def build_profile_user_prompt(
 - {sections[5]}
 - {sections[6]}
 - {sections[7]}
-4. 语言要优雅、自然、具体、带画面感
-5. 不要空泛，不要机械重复
-6. 结尾加一句：{note}
-7. 所有“当前状态 / 未来趋势 / 未来3个月”的判断，都必须以当前日期 {current_date} 为基准
-8. 如果提到年份，必须使用当前年份 {current_year}，不要写成其他年份
-9. 除非确实必要，否则尽量避免频繁直接写具体年份，以免造成时间错位感
+4. 重点围绕用户选择的主题「{topic_text}」展开。
+5. 语言要自然、具体、温和、有代入感。
+6. 不要空泛，不要机械重复。
+7. 不要写“占卜”“算命”“命理”“运势”“金运”“健康运”“未来预测”等表达。
+8. 不要写“命中注定”“必然发生”“一定会”等断定表达。
+9. 不要给医疗、法律、投资、就业等专业建议。
+10. 如果涉及时间，只写“近期”“当前阶段”“接下来一段时间”，不要写具体年份预测。
+11. 不要声称可以准确预测未来。
+12. 结尾加一句：{note}
 """
 
+
 PALM_IMAGE_ANALYSIS_PROMPT = """
-请分析这张手掌图片，并根据图中可见内容，提取手相相关特征。
+请分析这张手掌图片，并根据图中可见内容，提取“非医学、非预测性”的手掌外观特征。
 
 要求：
-1. 只根据图片中能看到的内容判断，不要编造过于确定的结论
-2. 输出必须尽量结构化、简洁、清楚
-3. 如果某条线看不清，请明确写“看不清”或“较模糊”
-4. 不要直接输出完整算命报告
-5. 不要输出 markdown 代码块
+1. 只根据图片中能看到的内容描述，不要编造过于确定的结论。
+2. 不要做医学判断。
+3. 不要写占卜、算命、命理、运势、未来预测、财富、健康结论。
+4. 不要根据手掌判断疾病、寿命、婚姻结果、财富结果。
+5. 输出必须结构化、简洁、清楚。
+6. 如果某些细节看不清，请明确写“看不清”或“较模糊”。
+7. 不要输出 markdown 代码块。
 
 请按以下格式输出：
 
-hand_type: （如：手掌较宽 / 手掌较长 / 偏方形 / 偏修长）
+hand_shape: （如：手掌较宽 / 手掌较长 / 偏方形 / 偏修长 / 看不清）
+finger_style: （如：手指较长 / 较短 / 较匀称 / 看不清）
 line_clarity: （如：较清晰 / 一般 / 较模糊）
-life_line: （如：较长较清晰 / 偏浅 / 断续 / 看不清）
-heart_line: （如：较长 / 较深 / 偏浅 / 看不清）
-head_line: （如：较直 / 略向下弯 / 较浅 / 看不清）
-fate_line: （如：较明显 / 较弱 / 断续 / 看不清）
-money_line: （如：有轻微迹象 / 不明显 / 多条细线 / 看不清）
-overall_impression: （一句总结，如：整体线条偏细，属于细腻谨慎型手相）
+visible_features: （根据可见内容描述主要线条、掌面整体状态，不做预测）
+overall_impression: （一句总结，如：整体给人细腻、谨慎、注重秩序的视觉印象）
 """
+
 
 def build_palm_report_prompt(
     palm_features: str,
@@ -290,21 +300,21 @@ def build_palm_report_prompt(
     note = LANG_TEXT[lang]["entertainment_note"]
 
     return f"""
-请使用{LANG_TEXT[lang]["lang_name"]}输出一份高代入感、高吸引力、像“专属手相深度报告”一样的分析结果。
+请使用{LANG_TEXT[lang]["lang_name"]}输出一份高代入感、自然、具体的“手掌特征倾向与自我理解报告”。
 
 用户信息：
 - 性别：{gender_text}
 - 年龄段：{age_text}
-- 重点方向：{topic_text}
+- 关注主题：{topic_text}
 - 当前日期：{current_date}
 - 当前年份：{current_year}
 
-手相观察结果：
+手掌图片中可见的非医学特征：
 {palm_features}
 
 输出要求：
-1. 开头先写一个有吸引力的标题，像“你的手相正在透露什么”这种感觉
-2. 第一段先写整体印象总结，让用户有“被看懂了”的感觉
+1. 开头先写一个自然、有吸引力的标题，例如“从手掌特征看你的行动风格”这种感觉。
+2. 第一段先写整体印象总结，让用户有“被理解了”的感觉，但不要神秘化。
 3. 然后严格按以下结构输出：
 - {sections[0]}
 - {sections[1]}
@@ -314,17 +324,21 @@ def build_palm_report_prompt(
 - {sections[5]}
 - {sections[6]}
 - {sections[7]}
-4. 表达风格融合中式运势语言、日本手相占卜表达、欧美占星式心理解读
-5. 语言要具体、优雅、有画面感，但不要过度夸张
-6. 不要写医疗诊断、死亡预测、灾难
-7. 结尾加一句：{note}
-8. 所有“当前状态 / 未来趋势 / 未来3个月”的判断，都必须以当前日期 {current_date} 为基准
-9. 如果提到年份，必须使用当前年份 {current_year}，不要写成其他年份
-10. 除非确实必要，否则尽量避免频繁直接写具体年份，以免造成时间错位感
+4. 重点围绕用户选择的主题「{topic_text}」展开。
+5. 表达风格要自然、具体、温和、有代入感。
+6. 不要过度夸张，不要使用神秘化或断定式表达。
+7. 不要写“占卜”“算命”“命理”“运势”“金运”“健康运”“未来预测”“手相占卜”等表达。
+8. 不要写“命中注定”“必然发生”“一定会”等断定表达。
+9. 不要给医疗、法律、投资、就业等专业建议。
+10. 不要根据手掌判断疾病、寿命、婚姻结果、财富结果。
+11. 如果涉及时间，只写“近期”“当前阶段”“接下来一段时间”，不要写具体年份预测。
+12. 不要声称可以准确预测未来。
+13. 结尾加一句：{note}
 """
 
+
 PALM_IMAGE_QUALITY_CHECK_PROMPT = """
-请检查这张图片是否适合用于手相分析。
+请检查这张图片是否适合用于手掌特征分析。
 
 你必须严格按照下面格式输出，不要输出 markdown，不要输出解释性前言：
 
@@ -341,7 +355,7 @@ reason_code: one of [ok, not_palm, too_blurry, too_dark, incomplete_palm, unclea
 - 如果明显不是手掌图片，输出 no
 
 2. is_clear:
-- 如果图片模糊、掌纹难以辨认，输出 no
+- 如果图片模糊、手掌细节难以辨认，输出 no
 
 3. is_bright_enough:
 - 如果图片太暗、阴影太重、细节看不清，输出 no
@@ -350,7 +364,7 @@ reason_code: one of [ok, not_palm, too_blurry, too_dark, incomplete_palm, unclea
 - 如果手掌没有完整展开、主要区域被裁切、只拍到一部分，输出 no
 
 5. is_usable:
-- 只有当以上条件整体满足可以做基础手相分析时，才输出 yes
+- 只有当以上条件整体满足可以做基础手掌特征分析时，才输出 yes
 - 否则输出 no
 
 6. reason_code:
@@ -359,6 +373,6 @@ reason_code: one of [ok, not_palm, too_blurry, too_dark, incomplete_palm, unclea
 - 如果主要问题是模糊，输出 too_blurry
 - 如果主要问题是太暗，输出 too_dark
 - 如果主要问题是手掌不完整，输出 incomplete_palm
-- 如果主要问题是掌纹不清楚，输出 unclear_lines
+- 如果主要问题是手掌细节不清楚，输出 unclear_lines
 - 如果无法准确归类，输出 other
 """

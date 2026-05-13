@@ -94,30 +94,30 @@ def get_palm_quality_error_message(reason_code: str, lang: str) -> str:
 
     messages = {
         "zh": {
-            "not_palm": "上传的图片不是清晰的手掌正面，无法用于手相分析。",
-            "too_blurry": "图片过于模糊，掌纹细节不足，暂时无法分析。",
+            "not_palm": "上传的图片不是清晰的手掌正面，无法用于手掌特征分析。",
+            "too_blurry": "图片过于模糊，手掌细节不足，暂时无法分析。",
             "too_dark": "图片过暗，细节不清晰，暂时无法分析。",
             "incomplete_palm": "手掌画面不完整，请上传手掌完整展开的照片。",
-            "unclear_lines": "掌纹不够清晰，暂时无法进行稳定分析。",
-            "other": "图片暂时不适合用于手相分析，请更换更清晰的手掌照片。",
+            "unclear_lines": "手掌细节不够清晰，暂时无法进行稳定分析。",
+            "other": "图片暂时不适合用于手掌特征分析，请更换更清晰的手掌照片。",
             "ok": "图片适合分析",
         },
         "ja": {
-            "not_palm": "アップロードされた画像は、手のひら正面の鮮明な画像として認識できず、手相分析に使用できません。",
-            "too_blurry": "画像がぼやけており、手相の線が十分に確認できないため分析できません。",
+            "not_palm": "アップロードされた画像は、手のひら正面の鮮明な画像として認識できず、手のひら特徴分析に使用できません。",
+            "too_blurry": "画像がぼやけており、手のひらの特徴が十分に確認できないため分析できません。",
             "too_dark": "画像が暗すぎて細部が確認できず、分析に適していません。",
             "incomplete_palm": "手のひら全体が写っていません。手のひら全体が開いた写真をアップロードしてください。",
-            "unclear_lines": "手相の線が不明瞭なため、安定した分析ができません。",
-            "other": "この画像は手相分析に適していません。より鮮明な手のひら写真をお試しください。",
+            "unclear_lines": "手のひらの細部が不明瞭なため、安定した分析ができません。",
+            "other": "この画像は手のひら特徴分析に適していません。より鮮明な手のひら写真をお試しください。",
             "ok": "画像は分析に適しています",
         },
         "en": {
-            "not_palm": "The uploaded image is not recognized as a clear front-facing palm photo and cannot be used for palm reading.",
-            "too_blurry": "The image is too blurry and the palm lines are not clear enough for analysis.",
+            "not_palm": "The uploaded image is not recognized as a clear front-facing palm photo and cannot be used for palm feature analysis.",
+            "too_blurry": "The image is too blurry and the palm details are not clear enough for analysis.",
             "too_dark": "The image is too dark and lacks enough visible detail for analysis.",
             "incomplete_palm": "The palm is not fully visible. Please upload a photo showing the whole palm clearly.",
-            "unclear_lines": "The palm lines are not clear enough for a stable reading.",
-            "other": "This image is not suitable for palm analysis. Please try a clearer palm photo.",
+            "unclear_lines": "The palm details are not clear enough for stable analysis.",
+            "other": "This image is not suitable for palm feature analysis. Please try a clearer palm photo.",
             "ok": "The image is suitable for analysis",
         }
     }
@@ -141,43 +141,43 @@ def build_preview_report(full_report: str, topic: str, lang: str = "zh") -> str:
     teaser_map = {
         "zh": f"""
 
-—— 预览内容到此为止 ——
+    —— 预览内容到此为止 ——
 
-你刚刚看到的，只是这份专属报告的前半部分。
+    你刚刚看到的，是这份自我理解报告的前半部分。
 
-解锁完整版后，你还将继续查看：
-• 关于「{topic_text}」更深层的解读
-• 未来阶段的变化信号与转折提示
-• 你最值得把握的机会窗口
-• 当前最需要避开的误区与风险点
-• 更具体、更有方向感的行动建议
-""",
+    解锁完整版后，你还将继续查看：
+    • 关于「{topic_text}」更细致的倾向解读
+    • 近期状态与思考模式的参考线索
+    • 更适合你当前阶段的关注重点
+    • 容易忽略的沟通、选择与行动盲点
+    • 更具体、更有方向感的自我调整建议
+    """,
         "ja": f"""
 
-—— プレビューはここまでです ——
+    —— プレビューはここまでです ——
 
-ここまでご覧いただいた内容は、この専属レポートの前半部分です。
+    ここまでご覧いただいた内容は、この自己理解レポートの前半部分です。
 
-完全版を解放すると、さらに以下の内容を確認できます：
-• 「{topic_text}」についてのより深い解釈
-• これから先の変化のサインと転機のヒント
-• 今つかむべきチャンスの流れ
-• 今もっとも避けるべき誤解やリスク
-• より具体的で方向性のある行動アドバイス
-""",
+    完全版を解放すると、さらに以下の内容を確認できます：
+    • 「{topic_text}」についてのより詳しい傾向分析
+    • 最近の状態や思考パターンを考えるためのヒント
+    • 今のあなたが意識しやすいテーマ
+    • 見落としやすいコミュニケーションや選択の癖
+    • より具体的で実用的なセルフケア・行動アドバイス
+    """,
         "en": f"""
 
-—— End of preview ——
+    —— End of preview ——
 
-What you have just read is only the first half of your personalized report.
+    What you have just read is only the first half of your self-understanding report.
 
-Unlock the full report to continue with:
-• A deeper reading of your {topic_text}
-• Upcoming changes and turning-point signals
-• The opportunity window you should seize
-• The blind spots and risks you should avoid
-• More specific and directional action advice
-"""
+    Unlock the full report to continue with:
+    • A deeper tendency-based reading of your {topic_text}
+    • Reference points for your recent state and thinking patterns
+    • Focus areas that may be useful for your current stage
+    • Communication, choice, and action blind spots
+    • More specific self-reflection and action suggestions
+    """
     }
 
     return preview_text + teaser_map[lang]
@@ -223,7 +223,7 @@ async def analyze(
             if palm_image is None:
                 return JSONResponse({
                     "success": False,
-                    "message": "手相模式必须上传图片"
+                    "message": "手掌特征分析需要上传图片"
                 }, status_code=400)
 
             ext = os.path.splitext(palm_image.filename)[1].lower()
@@ -286,7 +286,7 @@ async def analyze(
                 background_tasks.add_task(safe_delete_file, image_path)   # 这里先删文件
                 return JSONResponse({
                     "success": False,
-                    "message": "手相分析结果为空"
+                    "message": "手掌特征分析结果为空"
                 }, status_code=500)
 
             demo_free_report = build_preview_report(full_report, topic, lang)
@@ -372,7 +372,7 @@ async def create_checkout_session(request: Request):
                 "price_data": {
                     "currency": "jpy",
                     "product_data": {
-                        "name": "AI Fortune Full Report"
+                        "name": "AI Personality Insight Full Report"
                     },
                     "unit_amount": PRICE_JPY,
                 },

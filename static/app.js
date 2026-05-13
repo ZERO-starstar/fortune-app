@@ -41,143 +41,143 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const I18N = {
         zh: {
-            pageTitle: "AI手相 / 命理分析",
-            pageSubtitle: "上传手掌照片，或输入个人资料，获取你的专属运势分析报告",
+            pageTitle: "AI性格倾向 / 自我理解报告",
+            pageSubtitle: "上传手掌照片，或输入个人资料，生成娱乐参考用的性格倾向与行动风格报告",
             langLabel: "语言",
-            labelMode: "分析模式",
-            modeProfileOption: "资料命理分析",
-            modePalmOption: "手相分析",
+            labelMode: "分析方式",
+            modeProfileOption: "资料性格倾向分析",
+            modePalmOption: "手掌特征倾向分析",
             labelName: "姓名",
             labelGender: "性别",
             labelBirthday: "生日",
-            labelStarSign: "星座",
+            labelStarSign: "参考类型",
             labelPalmUpload: "上传手掌图片",
             labelPalmGender: "性别",
             labelAgeRange: "年龄段",
-            palmTip: "请上传清晰的手掌正面照片，尽量光线充足、掌纹清楚、手掌完整展开",
+            palmTip: "请上传清晰的手掌正面照片。本功能会根据可见手掌特征生成娱乐参考用的性格倾向报告。",
             chooseFileBtn: "选择手掌图片",
             fileNameEmpty: "未选择图片",
             fileNameRecovered: "未重新选择图片（已恢复上次分析结果）",
-            labelTopic: "想问的方向",
-            submitBtn: "生成分析报告",
-            freeResultTitle: "免费结果",
-            resultGuide: "先看看这份预览内容，若你觉得有共鸣，再决定是否解锁完整版。",
+            labelTopic: "想了解的方向",
+            submitBtn: "生成报告",
+            freeResultTitle: "免费预览",
+            resultGuide: "先看看这份预览内容，若你觉得有参考价值，再决定是否解锁完整报告。",
             previewBadge: "预览版",
             paidBadge: "完整版",
-            paidResultTitle: "完整版报告",
-            lockedTitle: "🔒 完整版深度报告已锁定",
+            paidResultTitle: "完整报告",
+            lockedTitle: "🔒 完整版自我理解报告已锁定",
             lockedIntro: "解锁后你将继续查看：",
-            lockedItem1: "更深入的性格与状态解读",
-            lockedItem2: "你当前最值得把握的机会",
-            lockedItem3: "未来3个月的变化趋势",
-            lockedItem4: "需要提前注意的风险点",
-            lockedItem5: "更具体的建议与行动方向",
+            lockedItem1: "更深入的性格倾向与行动风格解读",
+            lockedItem2: "你当前更值得关注的思考模式",
+            lockedItem3: "近期状态变化的参考线索",
+            lockedItem4: "容易忽略的沟通与决策盲点",
+            lockedItem5: "更具体的自我调整建议",
             unlockPriceNote: "仅需 ¥200 解锁完整报告",
-            unlockBtn: "立即解锁完整版",
-            unlockSoftNote: "先看预览，再决定，降低试错成本。",
-            heroPoint1: "✨ 先看免费预览，再决定是否解锁完整版",
-            heroPoint2: "🔮 支持手相分析 / 资料命理分析双模式",
+            unlockBtn: "解锁完整报告",
+            unlockSoftNote: "先看预览，再决定是否解锁。",
+            heroPoint1: "✨ 先看免费预览，再决定是否解锁完整报告",
+            heroPoint2: "🧭 支持资料分析 / 手掌特征分析双模式",
             heroPoint3: "🌏 支持中文、日本語、English",
-            previewHint: "你正在查看的是经过整理后的预览内容",
-            lockedSubtitle: "你看到的只是前半部分。后面的内容会更具体、更直接，也更适合拿来做判断参考。",
+            previewHint: "你正在查看的是整理后的预览内容",
+            lockedSubtitle: "你看到的只是前半部分。后面的内容会更具体，更适合作为自我理解和行动参考。",
             unlockTrustNote: "一次解锁，立即查看完整内容",
-            footerNote1: "本工具生成的内容仅供娱乐与参考，不构成医疗、法律、投资或其他专业建议。",
+            footerNote1: "本工具生成的内容仅供娱乐、自我理解与参考，不构成医疗、法律、投资、就业或其他专业建议。",
             footerNote2: "用户上传的图片与输入信息仅用于当前分析流程，不用于其他用途。",
             optionSelectGender: "请选择",
             optionMale: "男",
             optionFemale: "女",
-            optionSelectStar: "请选择星座",
+            optionSelectStar: "请选择参考类型",
             optionPalmSelectGender: "请选择",
             optionPalmMale: "男",
             optionPalmFemale: "女",
             optionAgeSelect: "请选择",
-            topicGeneral: "综合运势",
-            topicLove: "感情",
-            topicMarriage: "婚姻",
-            topicFuture: "前程",
-            topicCareer: "事业",
-            topicWealth: "金运",
-            topicHealth: "健康",
-            topicStudy: "学业",
+            topicGeneral: "综合倾向",
+            topicLove: "情感沟通倾向",
+            topicMarriage: "亲密关系倾向",
+            topicFuture: "未来规划参考",
+            topicCareer: "工作风格",
+            topicWealth: "金钱观与消费倾向",
+            topicHealth: "压力与生活状态",
+            topicStudy: "学习风格",
             topicRelationship: "人际关系",
-            topicThreeMonths: "未来3个月",
-            topicOneYear: "未来1年",
-            loadingPalm: "正在检查手掌图片质量，并生成你的手相分析报告，请稍候...",
-            loadingProfile: "正在生成你的专属命理分析报告，请稍候...",
-            msgPalmReady: "手相分析已完成。",
-            msgProfileReady: "命理分析已完成。",
-            msgPaidRestored: "支付成功，完整版报告已解锁。",
+            topicThreeMonths: "近期关注点",
+            topicOneYear: "长期规划参考",
+            loadingPalm: "正在检查图片质量，并生成你的手掌特征倾向报告，请稍候...",
+            loadingProfile: "正在生成你的自我理解报告，请稍候...",
+            msgPalmReady: "手掌特征报告已完成。",
+            msgProfileReady: "自我理解报告已完成。",
+            msgPaidRestored: "支付成功，完整报告已解锁。",
             msgCanceled: "你已取消支付，当前仍可查看预览内容。",
             msgCreateCheckoutFail: "创建支付失败：",
             msgAnalyzeFail: "分析失败：",
             msgNeedAnalyzeFirst: "缺少用户标识，请先重新分析一次"
         },
         ja: {
-            pageTitle: "AI手相 / 運勢分析",
-            pageSubtitle: "手のひら画像をアップロード、または個人情報を入力して、あなただけの運勢レポートを取得",
+            pageTitle: "AI性格傾向・自己理解レポート",
+            pageSubtitle: "手のひら画像またはプロフィール情報をもとに、娯楽・参考目的の性格傾向レポートを生成します",
             langLabel: "言語",
-            labelMode: "分析モード",
-            modeProfileOption: "プロフィール命理分析",
-            modePalmOption: "手相分析",
+            labelMode: "分析タイプ",
+            modeProfileOption: "プロフィール傾向分析",
+            modePalmOption: "手のひら特徴分析",
             labelName: "名前",
             labelGender: "性別",
             labelBirthday: "生年月日",
-            labelStarSign: "星座",
+            labelStarSign: "参考タイプ",
             labelPalmUpload: "手のひら画像をアップロード",
             labelPalmGender: "性別",
             labelAgeRange: "年齢層",
-            palmTip: "手のひら正面の鮮明な画像をアップロードしてください。明るく、手相が見やすく、手のひら全体が写っていることが理想です。",
+            palmTip: "手のひら正面の鮮明な画像をアップロードしてください。本機能は見える特徴をもとに、娯楽・参考目的の性格傾向レポートを生成します。",
             chooseFileBtn: "手のひら画像を選択",
             fileNameEmpty: "画像が未選択です",
             fileNameRecovered: "画像は再選択されていません（前回の分析結果を復元済み）",
             labelTopic: "知りたいテーマ",
-            submitBtn: "分析レポートを生成",
+            submitBtn: "レポートを生成",
             freeResultTitle: "無料プレビュー",
-            resultGuide: "まずはこのプレビューをご確認ください。続きが気になったら、完全版を解放してみてください。",
+            resultGuide: "まずはこのプレビューをご確認ください。参考になると感じたら、完全版を解放してみてください。",
             previewBadge: "プレビュー版",
             paidBadge: "完全版",
             paidResultTitle: "完全版レポート",
-            lockedTitle: "🔒 完全版の詳細レポートはロックされています",
+            lockedTitle: "🔒 完全版の自己理解レポートはロックされています",
             lockedIntro: "解放後に確認できる内容：",
-            lockedItem1: "より深い性格と状態の解釈",
-            lockedItem2: "今つかむべきチャンス",
-            lockedItem3: "今後3か月の流れ",
-            lockedItem4: "注意すべきリスク",
-            lockedItem5: "より具体的な行動アドバイス",
+            lockedItem1: "より深い性格傾向と行動スタイルの解釈",
+            lockedItem2: "今のあなたが意識しやすい思考パターン",
+            lockedItem3: "最近の状態変化を考えるためのヒント",
+            lockedItem4: "見落としやすいコミュニケーションや判断の癖",
+            lockedItem5: "より具体的なセルフケア・行動アドバイス",
             unlockPriceNote: "¥200で完全版レポートを解放",
             unlockBtn: "完全版を解放する",
             unlockSoftNote: "まずはプレビューを見てから判断できます。",
-            heroPoint1: "✨ まず無料プレビューを確認してから、完全版を解放できます",
-            heroPoint2: "🔮 手相分析 / プロフィール命理分析の2モード対応",
+            heroPoint1: "✨ 無料プレビューを確認してから完全版を解放できます",
+            heroPoint2: "🧭 プロフィール分析 / 手のひら特徴分析に対応",
             heroPoint3: "🌏 中文・日本語・English に対応",
             previewHint: "現在表示しているのは整理済みのプレビュー内容です",
-            lockedSubtitle: "今見えているのは前半部分です。後半はより具体的で、判断材料としても使いやすい内容です。",
+            lockedSubtitle: "今見えているのは前半部分です。後半はより具体的で、自己理解や行動の参考にしやすい内容です。",
             unlockTrustNote: "一度の解放ですぐに完全版を確認できます",
-            footerNote1: "本ツールの生成内容は娯楽・参考目的であり、医療・法律・投資等の専門的助言ではありません。",
+            footerNote1: "本ツールの生成内容は娯楽・自己理解・参考目的であり、医療・法律・投資・就職等の専門的助言ではありません。",
             footerNote2: "アップロードされた画像と入力情報は今回の分析処理にのみ使用されます。",
             optionSelectGender: "選択してください",
             optionMale: "男性",
             optionFemale: "女性",
-            optionSelectStar: "星座を選択",
+            optionSelectStar: "参考タイプを選択",
             optionPalmSelectGender: "選択してください",
             optionPalmMale: "男性",
             optionPalmFemale: "女性",
             optionAgeSelect: "選択してください",
-            topicGeneral: "総合運勢",
-            topicLove: "恋愛",
-            topicMarriage: "結婚",
-            topicFuture: "将来運",
-            topicCareer: "仕事運",
-            topicWealth: "金運",
-            topicHealth: "健康運",
-            topicStudy: "学業運",
+            topicGeneral: "総合傾向",
+            topicLove: "恋愛・感情傾向",
+            topicMarriage: "親密な関係の傾向",
+            topicFuture: "今後の計画の参考",
+            topicCareer: "仕事スタイル",
+            topicWealth: "お金との向き合い方",
+            topicHealth: "ストレス・生活状態",
+            topicStudy: "学習スタイル",
             topicRelationship: "人間関係",
-            topicThreeMonths: "今後3か月",
-            topicOneYear: "今後1年",
-            loadingPalm: "画像の適性を確認し、手相レポートを生成しています。しばらくお待ちください...",
-            loadingProfile: "あなた専用の命理分析レポートを生成しています。しばらくお待ちください...",
-            msgPalmReady: "手相分析が完了しました。",
-            msgProfileReady: "命理分析が完了しました。",
+            topicThreeMonths: "最近の関心テーマ",
+            topicOneYear: "長期計画の参考",
+            loadingPalm: "画像の適性を確認し、手のひら特徴レポートを生成しています。しばらくお待ちください...",
+            loadingProfile: "自己理解レポートを生成しています。しばらくお待ちください...",
+            msgPalmReady: "手のひら特徴レポートが完了しました。",
+            msgProfileReady: "自己理解レポートが完了しました。",
             msgPaidRestored: "支払いが完了し、完全版レポートが解放されました。",
             msgCanceled: "支払いはキャンセルされました。現在はプレビュー内容をご確認いただけます。",
             msgCreateCheckoutFail: "決済ページの作成に失敗しました：",
@@ -185,71 +185,71 @@ document.addEventListener("DOMContentLoaded", () => {
             msgNeedAnalyzeFirst: "ユーザー識別情報がありません。先に再分析してください。"
         },
         en: {
-            pageTitle: "AI Palm / Fortune Analysis",
-            pageSubtitle: "Upload a palm photo or enter your personal details to get your personalized fortune report",
+            pageTitle: "AI Personality Insight Report",
+            pageSubtitle: "Upload a palm photo or enter your profile details to generate an entertainment-based personality insight report",
             langLabel: "Language",
-            labelMode: "Analysis Mode",
-            modeProfileOption: "Profile Fortune Analysis",
-            modePalmOption: "Palm Reading Analysis",
+            labelMode: "Analysis Type",
+            modeProfileOption: "Profile Insight Analysis",
+            modePalmOption: "Palm Feature Insight",
             labelName: "Name",
             labelGender: "Gender",
             labelBirthday: "Birthday",
-            labelStarSign: "Zodiac Sign",
-            labelPalmUpload: "Upload Palm Photo",
+            labelStarSign: "Reference Type",
+            labelPalmUpload: "Upload Palm Image",
             labelPalmGender: "Gender",
             labelAgeRange: "Age Range",
-            palmTip: "Please upload a clear front-facing palm photo with enough light, visible lines, and the full palm in frame.",
+            palmTip: "Please upload a clear front-facing palm photo. This feature generates an entertainment-based personality tendency report from visible palm features.",
             chooseFileBtn: "Choose Palm Image",
             fileNameEmpty: "No image selected",
             fileNameRecovered: "No new image selected (previous analysis restored)",
             labelTopic: "Focus Area",
             submitBtn: "Generate Report",
             freeResultTitle: "Free Preview",
-            resultGuide: "Start with this preview. If you'd like to explore further, you can unlock the full report.",
+            resultGuide: "Start with this preview. If it feels useful, you can unlock the full report.",
             previewBadge: "Preview",
             paidBadge: "Full",
             paidResultTitle: "Full Report",
-            lockedTitle: "🔒 The full deep-dive report is locked",
+            lockedTitle: "🔒 The full self-understanding report is locked",
             lockedIntro: "Unlock to continue reading:",
-            lockedItem1: "A deeper interpretation of your personality and current state",
-            lockedItem2: "The opportunity you should seize now",
-            lockedItem3: "Your next 3 months trend",
-            lockedItem4: "The risks you should pay attention to",
-            lockedItem5: "More specific advice and action guidance",
+            lockedItem1: "A deeper look at your personality tendencies and action style",
+            lockedItem2: "Thought patterns you may want to notice right now",
+            lockedItem3: "Reference points for recent state changes",
+            lockedItem4: "Communication and decision-making blind spots",
+            lockedItem5: "More specific self-reflection and action suggestions",
             unlockPriceNote: "Unlock the full report for only ¥200",
             unlockBtn: "Unlock Full Report",
             unlockSoftNote: "Review the preview first, then decide.",
             heroPoint1: "✨ Review the free preview first, then decide whether to unlock the full report",
-            heroPoint2: "🔮 Supports both palm reading and profile fortune analysis",
+            heroPoint2: "🧭 Supports profile analysis and palm feature analysis",
             heroPoint3: "🌏 Available in 中文, 日本語, and English",
             previewHint: "You are viewing a curated preview version of your report",
-            lockedSubtitle: "What you see now is only the first half. The rest is more specific, more direct, and more useful for reflection.",
+            lockedSubtitle: "What you see now is only the first half. The rest is more specific and useful for self-understanding and reflection.",
             unlockTrustNote: "Unlock once and view the full content immediately",
-            footerNote1: "The generated content is for entertainment and reference only, and does not constitute medical, legal, investment, or other professional advice.",
+            footerNote1: "The generated content is for entertainment, self-understanding, and reference only. It does not constitute medical, legal, investment, employment, or other professional advice.",
             footerNote2: "Uploaded images and entered information are only used for the current analysis process.",
             optionSelectGender: "Please select",
             optionMale: "Male",
             optionFemale: "Female",
-            optionSelectStar: "Select zodiac sign",
+            optionSelectStar: "Select reference type",
             optionPalmSelectGender: "Please select",
             optionPalmMale: "Male",
             optionPalmFemale: "Female",
             optionAgeSelect: "Please select",
-            topicGeneral: "Overall Fortune",
-            topicLove: "Love",
-            topicMarriage: "Marriage",
-            topicFuture: "Future Path",
-            topicCareer: "Career",
-            topicWealth: "Wealth",
-            topicHealth: "Health",
-            topicStudy: "Study",
+            topicGeneral: "Overall Tendencies",
+            topicLove: "Emotional Communication",
+            topicMarriage: "Close Relationship Tendencies",
+            topicFuture: "Planning Reference",
+            topicCareer: "Work Style",
+            topicWealth: "Money Mindset",
+            topicHealth: "Stress and Lifestyle",
+            topicStudy: "Learning Style",
             topicRelationship: "Relationships",
-            topicThreeMonths: "Next 3 Months",
-            topicOneYear: "Next 1 Year",
-            loadingPalm: "Checking palm image quality and generating your palm reading report. Please wait...",
-            loadingProfile: "Generating your personalized fortune analysis report. Please wait...",
-            msgPalmReady: "Your palm reading is ready.",
-            msgProfileReady: "Your fortune analysis is ready.",
+            topicThreeMonths: "Recent Focus Areas",
+            topicOneYear: "Long-Term Planning Reference",
+            loadingPalm: "Checking image quality and generating your palm feature insight report. Please wait...",
+            loadingProfile: "Generating your self-understanding report. Please wait...",
+            msgPalmReady: "Your palm feature insight report is ready.",
+            msgProfileReady: "Your self-understanding report is ready.",
             msgPaidRestored: "Payment successful. Your full report has been unlocked.",
             msgCanceled: "You canceled the payment. You can still review the preview.",
             msgCreateCheckoutFail: "Failed to create checkout session: ",
@@ -383,60 +383,60 @@ document.addEventListener("DOMContentLoaded", () => {
     function validateForm() {
         const topic = document.getElementById("topic")?.value;
         const mode = modeSelect?.value;
-
+    
         if (!topic) {
-            alert("请选择想问的方向");
+            alert("请选择想了解的方向");
             return false;
         }
-
+    
         if (mode === "profile") {
             const name = document.getElementById("name")?.value.trim();
             const gender = document.getElementById("profileGender")?.value;
             const birthday = document.getElementById("birthday")?.value;
-
+    
             if (!name) {
                 alert("请输入姓名");
                 return false;
             }
-
+    
             if (!gender) {
                 alert("请选择性别");
                 return false;
             }
-
+    
             if (!birthday) {
                 alert("请选择生日");
                 return false;
             }
         }
-
+    
         if (mode === "palm") {
             const palmImage = document.getElementById("palmImage")?.files?.[0];
             const palmGender = document.getElementById("palmGender")?.value;
             const ageRange = document.getElementById("ageRange")?.value;
-
+    
             if (!palmImage) {
                 alert("请上传手掌图片");
                 return false;
             }
-
+    
             if (!palmGender) {
                 alert("请选择性别");
                 return false;
             }
-
+    
             if (!ageRange) {
                 alert("请选择年龄段");
                 return false;
             }
-
+    
             const maxSize = 5 * 1024 * 1024;
             if (palmImage.size > maxSize) {
                 alert("图片不能超过 5MB");
                 return false;
             }
         }
-
+    
         return true;
     }
 
@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isPaid) {
             lockedBox.classList.add("hidden");
             paidContent.classList.remove("hidden");
-            paidReport.textContent = latestPaidReport || "完整版内容为空";
+            paidReport.textContent = latestPaidReport || "完整报告内容为空";
         
             if (paidBadge) {
                 paidBadge.classList.remove("hidden");
@@ -488,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const savedGender = localStorage.getItem(STORAGE_KEYS.gender) || "";
         const savedBirthday = localStorage.getItem(STORAGE_KEYS.birthday) || "";
         const savedStarSign = localStorage.getItem(STORAGE_KEYS.starSign) || "";
-        const savedTopic = localStorage.getItem(STORAGE_KEYS.topic) || "综合运势";
+        const savedTopic = localStorage.getItem(STORAGE_KEYS.topic) || "综合倾向";
         const savedPalmGender = localStorage.getItem(STORAGE_KEYS.palmGender) || "";
         const savedAgeRange = localStorage.getItem(STORAGE_KEYS.ageRange) || "";
     
@@ -528,7 +528,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const gender = data.gender || "";
         const birthday = data.birthday || "";
         const starSign = data.star_sign || "";
-        const topic = data.topic || "综合运势";
+        const topic = data.topic || "综合倾向";
     
         if (modeEl) modeEl.value = mode;
         if (topicEl) topicEl.value = topic;
@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
             renderPaidState(true);
 
             if (modeSelect && modeSelect.value === "palm" && fileNameText && palmImageInput && !(palmImageInput.files && palmImageInput.files[0])) {
-                fileNameText.textContent = "未重新选择图片（已恢复上次分析结果）";
+                fileNameText.textContent = t("fileNameRecovered");
                 fileNameText.classList.remove("placeholder");
             }
 
@@ -857,7 +857,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     alert(data.message || "分析失败");
                 }
             } catch (error) {
-                console.error("提交分析失败：", error);
+                console.error("创建支付失败：", error);
                 showMessage(`${t("msgAnalyzeFail")}${error.message}`, "error");
             } finally {
                 if (loading) loading.classList.add("hidden");
